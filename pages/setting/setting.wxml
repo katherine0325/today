@@ -1,10 +1,87 @@
 <view class="setting">
+  <view class="create">
+    <textarea bindblur="changeText"></textarea>
+    <button bindtap="submitToday">添加今日任务</button>
+  </view>
   <view class="plate">
     <view class="title">
-
+      每天
+      <navgator to="/pages/add/add?type=everyday"> + </navgator>
     </view>
-    <view class="setion">
-
+    <view class="section">
+      <button wx:key="*this" wx:for="{{everyday}}">{{item}}</button>
+    </view>
+  </view>
+  <view class="plate">
+    <view class="title">
+      随机
+      <navgator to="/pages/add/add?type=random"> + </navgator>
+    </view>
+    <view class="section">
+      <button wx:key="*this" wx:for="{{random}}">{{item}}</button>
+    </view>
+  </view>
+  <view class="plate">
+    <view class="title">
+      星期一
+      <navgator to="/pages/add/add?type=monday"> + </navgator>
+    </view>
+    <view class="section">
+      <button wx:key="*this" wx:for="{{monday}}">{{item}}</button>
+    </view>
+  </view>
+  <view class="plate">
+    <view class="title">
+      星期二
+      <navgator to="/pages/add/add?type=tuseay"> + </navgator>
+    </view>
+    <view class="section">
+      <button wx:key="*this" wx:for="{{tuseday}}">{{item}}</button>
+    </view>
+  </view>
+  <view class="plate">
+    <view class="title">
+      星期三
+      <navgator to="/pages/add/add?type=wednsday"> + </navgator>
+    </view>
+    <view class="section">
+      <button wx:key="*this" wx:for="{{wednsday}}">{{item}}</button>
+    </view>
+  </view>
+  <view class="plate">
+    <view class="title">
+      星期四
+      <navgator to="/pages/add/add?type=tursday"> + </navgator>
+    </view>
+    <view class="section">
+      <button wx:key="*this" wx:for="{{tursday}}">{{item}}</button>
+    </view>
+  </view>
+  <view class="plate">
+    <view class="title">
+      星期五
+      <navgator to="/pages/add/add?type=friday"> + </navgator>
+    </view>
+    <view class="section">
+      <button wx:key="*this" wx:for="{{friday}}">{{item}}</button>
+    </view>
+  </view>
+  <view class="plate">
+    <view class="title">
+      星期六
+      <navgator to="/pages/add/add?type=saturday"> + </navgator>
+    </view>
+    <view class="section">
+      <button wx:key="*this" wx:for="{{saturday}}">{{item}}</button>
+    </view>
+  </view>
+  <view class="plate">
+    <view class="title">
+      星期天
+      <navgator to="/pages/add/add?type=sunday"> + </navgator>
+    </view>
+    <view class="section">
+      <button wx:key="*this" wx:for="{{sunday}}">{{item}}</button>
     </view>
   </view>
 </view>

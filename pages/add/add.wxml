@@ -1,0 +1,5 @@
+<!--add.wxml-->
+<view class="add">
+  <textarea bindblur="changeText"></textarea>
+  <button bindtap="submit">添加</button>
+</view>
