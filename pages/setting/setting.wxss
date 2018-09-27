@@ -1,3 +1,64 @@
 /* pages/setting/setting.wxss */
+page {
+  font-size: 32rpx;
+}
 
+.setting {
+  padding-bottom: 12rpx;
+}
+
+.setting .plate {
+  margin: 24rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+.setting .create input {
+  margin: 12rpx;
+  padding: 20rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 8rpx;
+}
+
+.setting .create .btn {
+  background: #3BAEE4;
+  color: #fff;
+  margin: 12rpx;
+}
+
+.setting .plate .title {
+  text-align: center;
+  color: #fff;
+  line-height: 68rpx;
+}
+
+.setting .plate .title navigator {
+  margin: 12rpx;
+  float: right;
+  background: rgba(255, 255, 255, .2);
+  border: 1rpx solid #fff;
+  line-height: 38rpx;
+  font-size: 38rpx;
+  width: 60rpx;
+  height: 42rpx;
+  border-radius: 6rpx;
+}
+
+.setting .plate .section button {
+  display: inline-block;
+  margin: 12rpx;
+}
+
+.setting .btns button {
+  margin: 24rpx;  
+}
+
+.setting .btns .reload {
+  background: #3BAEE4;
+  color: #fff;
+}
+
+.setting .btn::after {
+  border: none;
+}
 

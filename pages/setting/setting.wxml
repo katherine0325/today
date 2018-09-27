@@ -1,87 +1,112 @@
 <view class="setting">
-  <view class="create">
-    <textarea bindblur="changeText"></textarea>
-    <button bindtap="submitToday">添加今日任务</button>
+  <view class="plate create">
+    <view class="section">
+      <button size="mini" wx:key="*this" wx:for="{{todays}}" data-collection="todays" data-id="{{item._id}}" bindtap='delete'>{{item.name}}</button>
+    </view>
+    <input bindinput="changeText" value="{{create_context}}" />
+    <button class="btn" bindtap="submitToday">添加今日任务</button>
+  </view>
+  <view class="plate" style="display: {{tomorrows.length > 0? '': 'none'}}">
+    <view class="title" style="background: #B8D8E1;">
+      明天再说
+    </view>
+    <view class="section">
+      <button size="mini" wx:key="*this" wx:for="{{tomorrows}}" data-collection="tomorrows" data-id="{{item._id}}" bindtap='delete'>{{item.name}}</button>
+    </view>
   </view>
   <view class="plate">
-    <view class="title">
+    <view class="title" style="background: #B8D8E1;">
       每天
-      <navgator to="/pages/add/add?type=everyday"> + </navgator>
+      <navigator url="/pages/add/add?type=everydays"> + </navigator>
     </view>
     <view class="section">
-      <button wx:key="*this" wx:for="{{everyday}}">{{item}}</button>
+      <button size="mini" wx:key="*this" wx:for="{{everydays}}" data-collection="everydays" data-id="{{item._id}}" bindtap='delete'>{{item.name}}</button>
     </view>
   </view>
   <view class="plate">
-    <view class="title">
+    <view class="title" style="background: #B8D8E1;">
       随机
-      <navgator to="/pages/add/add?type=random"> + </navgator>
+      <navigator url="/pages/add/add?type=randoms"> + </navigator>
     </view>
     <view class="section">
-      <button wx:key="*this" wx:for="{{random}}">{{item}}</button>
+      <button size="mini" wx:key="*this" wx:for="{{randoms}}" data-collection="randoms" data-id="{{item._id}}" bindtap="delete">{{item.name}}</button>
     </view>
   </view>
   <view class="plate">
-    <view class="title">
+    <view class="title" style="background: #B8D8E1;">
       星期一
-      <navgator to="/pages/add/add?type=monday"> + </navgator>
+      <navigator url="/pages/add/add?type=mondays"> + </navigator>
     </view>
     <view class="section">
-      <button wx:key="*this" wx:for="{{monday}}">{{item}}</button>
+      <button size="mini" wx:key="*this" wx:for="{{mondays}}" data-collection="mondays" data-id="{{item._id}}" bindtap="delete">{{item.name}}</button>
     </view>
   </view>
   <view class="plate">
-    <view class="title">
+    <view class="title" style="background: #B8D8E1;">
       星期二
-      <navgator to="/pages/add/add?type=tuseay"> + </navgator>
+      <navigator url="/pages/add/add?type=tuesdays"> + </navigator>
     </view>
     <view class="section">
-      <button wx:key="*this" wx:for="{{tuseday}}">{{item}}</button>
+      <button size="mini" wx:key="*this" wx:for="{{tuesdays}}" data-collection="tuesdays" data-id="{{item._id}}" bindtap="delete">{{item.name}}</button>
     </view>
   </view>
   <view class="plate">
-    <view class="title">
+    <view class="title" style="background: #B8D8E1;">
       星期三
-      <navgator to="/pages/add/add?type=wednsday"> + </navgator>
+      <navigator url="/pages/add/add?type=wednesdays"> + </navigator>
     </view>
     <view class="section">
-      <button wx:key="*this" wx:for="{{wednsday}}">{{item}}</button>
+      <button size="mini" wx:key="*this" wx:for="{{wednesdays}}" data-collection="wednesdays" data-id="{{item._id}}" bindtap="delete">{{item.name}}</button>
     </view>
   </view>
   <view class="plate">
-    <view class="title">
+    <view class="title" style="background: #B8D8E1;">
       星期四
-      <navgator to="/pages/add/add?type=tursday"> + </navgator>
+      <navigator url="/pages/add/add?type=thursdays"> + </navigator>
     </view>
     <view class="section">
-      <button wx:key="*this" wx:for="{{tursday}}">{{item}}</button>
+      <button size="mini" wx:key="*this" wx:for="{{thursdays}}" data-collection="thursdays" data-id="{{item._id}}" bindtap="delete">{{item.name}}</button>
     </view>
   </view>
   <view class="plate">
-    <view class="title">
+    <view class="title" style="background: #B8D8E1;">
       星期五
-      <navgator to="/pages/add/add?type=friday"> + </navgator>
+      <navigator url="/pages/add/add?type=fridays"> + </navigator>
     </view>
     <view class="section">
-      <button wx:key="*this" wx:for="{{friday}}">{{item}}</button>
+      <button size="mini" wx:key="*this" wx:for="{{fridays}}" data-collection="fridays" data-id="{{item._id}}" bindtap="delete">{{item.name}}</button>
     </view>
   </view>
   <view class="plate">
-    <view class="title">
+    <view class="title" style="background: #B8D8E1;">
       星期六
-      <navgator to="/pages/add/add?type=saturday"> + </navgator>
+      <navigator url="/pages/add/add?type=saturdays"> + </navigator>
     </view>
     <view class="section">
-      <button wx:key="*this" wx:for="{{saturday}}">{{item}}</button>
+      <button size="mini" wx:key="*this" wx:for="{{saturdays}}" data-collection="saturdays" data-id="{{item._id}}" bindtap="delete">{{item.name}}</button>
     </view>
   </view>
   <view class="plate">
-    <view class="title">
+    <view class="title" style="background: #B8D8E1;">
       星期天
-      <navgator to="/pages/add/add?type=sunday"> + </navgator>
+      <navigator url="/pages/add/add?type=sundays"> + </navigator>
     </view>
     <view class="section">
-      <button wx:key="*this" wx:for="{{sunday}}">{{item}}</button>
+      <button size="mini" wx:key="*this" wx:for="{{sundays}}" data-collection="sundays" data-id="{{item._id}}" bindtap="delete">{{item.name}}</button>
     </view>
+  </view>
+  <view class="plate">
+    <view class="title" style="background: #B8D8E1;">
+      指定日期
+      <navigator url="/pages/add/add?type=dates"> + </navigator>
+    </view>
+    <view class="section">
+      <button size="mini" wx:key="*this" wx:for="{{dates}}" data-collection="dates" data-id="{{item._id}}" bindtap="delete">{{item.date}}: {{item.name}}</button>
+    </view>
+  </view>
+  <view class="btns">
+    <button class="reload" bindtap="reload">重载今日事项</button>
+    <button bindtap='goFeedback'>反馈建议</button>
+    <button class="share" open-type='share'>分享给朋友</button>
   </view>
 </view>

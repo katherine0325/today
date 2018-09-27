@@ -1,1 +1,41 @@
 /**add.wxss**/
+page {
+  background: #F7F8FA;
+}
+
+.add .picker {
+  margin: 24rpx;
+  margin-top: 48rpx;
+  border-radius: 8rpx;
+  padding: 12rpx;
+  background: #fff;
+  color: #aaa;
+  font-size: 32rpx;
+  line-height: 68rpx;
+  text-align: center;
+  box-shadow: 0 0 12rpx #eee;
+}
+
+.add input {
+  margin: 24rpx;
+  padding: 30rpx;
+  background: #fff;
+  margin-top: 48rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 0 12rpx #eee;
+}
+
+.add button {
+  position: fixed;
+  left: 12rpx;
+  right: 12rpx;
+  bottom: 12rpx;
+  background: #3BAEE4;
+  color: #fff;
+  margin: 18rpx;
+}
+
+.add button::after {
+  border: none;
+}
+

@@ -1,0 +1,6 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="feedback">
+  <textarea bindinput='changeText' placeholder='可以称赞我 ^__^ 或者有什么希望改善的也可以给我留言哦 (￣∇￣)' placeholder-style='color: #ddd;font-size: 32rpx;line-height: 48rpx;'>
+  </textarea>
+  <button class="submit" bindtap="submit">提交</button>
+</view>

@@ -2,6 +2,45 @@ page {
     background-image: url(http://static.xoedge.com/xo-registry/webui/images/gvr-background-image-desktop.svg);
 }
 
+.index {
+  padding-bottom: 12rpx;
+}
+
 .index button {
-    margin: 24rpx;
+  margin: 24rpx;
+  background: rgba(255, 255, 255, .7)
+}
+
+.index .rotate {
+  background: rgba(184,216,225, .7);
+  animation: rotate 0.6s;
+}
+
+@keyframes rotate {
+    0% {transform: rotateX(0deg)}
+    100% {transform: rotateX(360deg)}
+}
+
+.index-menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  background: rgba(0, 0, 0, .5);
+}
+
+.index-menu view {
+  margin: auto 20rpx;
+  padding: 20rpx;
+  text-align: center;
+  line-height: 50rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 35rpx;
+  box-shadow: 0 0 30rpx rgba(0, 0, 0, .4);
 }

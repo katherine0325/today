@@ -1,0 +1,30 @@
+/* pages/feedback/feedback.wxss */
+page {
+  background: #F7F8FA;
+}
+
+.feedback textarea {
+  margin: 24rpx;
+  padding: 24rpx;
+  width: auto;
+  background: #fff;
+  margin-top: 24rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  line-height: 48rpx;
+  box-shadow: 0 0 12rpx #eee;
+}
+
+.feedback button {
+  margin: 24rpx;
+}
+
+.feedback .submit::after {
+  border: none;
+}
+
+.feedback .submit {
+  background: #3BAEE4;
+  color: #fff;
+}
+

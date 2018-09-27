@@ -1,5 +1,10 @@
 <!--add.wxml-->
 <view class="add">
-  <textarea bindblur="changeText"></textarea>
-  <button bindtap="submit">添加</button>
+  <picker mode="date" style="display: {{create_type == 'dates'? '' : 'none'}}" value="{{date}}" start="2018-08-01" end="2100-01-01" bindchange="changeDate">
+    <view class="picker">
+      {{create_date? create_date : '选择日期'}}
+    </view>
+  </picker>
+  <input bindinput='changeText' bindconfirm="submit" auto-focus value="{{create_context}}" placeholder='添加事项' placeholder-style='color: #ddd;' />
+  <button bindtap="submit">添加事项</button>
 </view>

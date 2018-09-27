@@ -1,6 +1,17 @@
 //app.js
 App({
   onLaunch: function () {
+    /**
+     * 知晓云插件初始化
+     */
+    wx.BaaS = requirePlugin('sdkPlugin')
+    //让插件帮助完成登录、支付等功能
+    wx.BaaS.wxExtend(wx.login,
+      wx.getUserInfo,
+      wx.requestPayment)
+
+    wx.BaaS.init('ec33d53e00d2b4c3cfcf');
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -35,5 +46,18 @@ App({
   },
   globalData: {
     userInfo: null
+  }
+})
+
+
+App({
+  onLaunch: function () {
+    wx.BaaS = requirePlugin('sdkPlugin')
+    //让插件帮助完成登录、支付等功能
+    wx.BaaS.wxExtend(wx.login,
+      wx.getUserInfo,
+      wx.requestPayment)
+
+    wx.BaaS.init('ec33d53e00d2b4c3cfcf')
   }
 })

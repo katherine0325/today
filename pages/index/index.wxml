@@ -1,3 +1,8 @@
 <view class="index">
-    <button class="{{item == animation ? 'rotate' : ''}}" data-name="{{item}}" wx:key="*this" wx:for="{{tasks}}">{{item}}</button>
+    <button class="{{item._id == animation ? 'rotate' : ''}}" data-id="{{item._id}}" wx:key="*this" wx:for="{{todayData}}" bindtap='finish' bindlongpress="showMenu">{{item.name}}</button>
+</view>
+
+<view class="index-menu" bindtap='hideMenu' style="display: {{isShowMenu? '' : 'none'}}">
+  <view style="background: #70CB4C;" catchtap='addTomorrow'>明天再说</view>
+  <view style="background: #58ABEF;" catchtap='addRandom'>放入随机</view>
 </view>
